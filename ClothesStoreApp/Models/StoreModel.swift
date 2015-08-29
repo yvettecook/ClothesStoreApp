@@ -10,6 +10,12 @@ import Foundation
 
 class StoreModel : NSObject {
     
-    let storeCatalog : [ProductInfoStruct] = []
+    var catalogue : [ProductInfoStruct] = []
+    
+    func addProductToCatalogue(product: ProductModel, quantity: Int){
+        let productInfo = ProductInfoStruct(product: product, quantity: quantity)
+        catalogue.append(productInfo)
+    }
+    
     
 }

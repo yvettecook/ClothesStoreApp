@@ -11,6 +11,17 @@ import UIKit
 
 class MainViewController : UIViewController {
  
+    let store = StoreModel()
     
+    override func viewDidLoad() {
+        populateStore()
+    }
+    
+    func populateStore() {
+        println(store.catalogue.count)
+        let product1 = ProductModel(name: "Almond Toe Court Shoes");
+        store.addProductToCatalogue(product1, quantity: 5)
+        println(store.catalogue.count)
+    }
     
 }
