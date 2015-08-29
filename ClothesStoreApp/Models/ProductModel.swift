@@ -11,9 +11,11 @@ import Foundation
 class ProductModel : NSObject {
     
     let name : String
+    let category : CategoryStruct
     
-    init(name : String){
+    init(name: String, category: CategoryStruct){
         self.name = name
+        self.category = category
     }
     
 }

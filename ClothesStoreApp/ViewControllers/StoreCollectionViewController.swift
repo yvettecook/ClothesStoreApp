@@ -29,8 +29,10 @@ class StoreCollectionViewController : UIViewController, UICollectionViewDelegate
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("productCell", forIndexPath: indexPath) as! ProductCell
         let productInfo = store.catalogue[indexPath.row] as ProductInfoStruct
-        cell.nameLabel.text = productInfo.product.name
+        let product = productInfo.product
+        cell.nameLabel.text = product.name
         cell.quantityLabel.text = productInfo.quantity.description
+        cell.genderLabel.text = product.category.gender.description
         return cell
     }
     

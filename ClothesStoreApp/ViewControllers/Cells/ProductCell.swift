@@ -13,5 +13,6 @@ class ProductCell : UICollectionViewCell {
     
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var quantityLabel: UILabel!
+    @IBOutlet var genderLabel: UILabel!
     
 }
