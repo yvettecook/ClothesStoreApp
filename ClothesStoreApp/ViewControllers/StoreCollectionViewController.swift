@@ -11,6 +11,8 @@ import UIKit
 
 class StoreCollectionViewController : UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
+    var store = StoreModel()
+    
     @IBOutlet var collectionView: UICollectionView!
     
     override func viewDidLoad() {
@@ -21,12 +23,12 @@ class StoreCollectionViewController : UIViewController, UICollectionViewDelegate
     // Mark : UICollectionViewDelegate
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1
+        return store.catalogue.count
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("productCell", forIndexPath: indexPath) as! ProductCell
-        cell.nameLabel.text = "Test"
+        cell.nameLabel.text = store.catalogue[0].product.name
         return cell
     }
     

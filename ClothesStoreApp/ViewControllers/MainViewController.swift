@@ -13,15 +13,28 @@ class MainViewController : UIViewController {
  
     let store = StoreModel()
     
+    @IBOutlet var storeCollectionContainer: UIView!
+
     override func viewDidLoad() {
         populateStore()
+        populateStoreCollectionView()
     }
     
+    // Mark: Store Set-Up
+    
     func populateStore() {
-        println(store.catalogue.count)
         let product1 = ProductModel(name: "Almond Toe Court Shoes");
         store.addProductToCatalogue(product1, quantity: 5)
-        println(store.catalogue.count)
+    }
+    
+    // Mark: Child ViewControllers Set-Up
+    
+    func populateStoreCollectionView() {
+        let storeCollectionVC = storyboard?.instantiateViewControllerWithIdentifier("StoreCollectionViewController") as! StoreCollectionViewController
+        storeCollectionVC.store = self.store
+        storeCollectionVC.view.frame = storeCollectionContainer.bounds
+        storeCollectionContainer.addSubview(storeCollectionVC.view)
+        self.addChildViewController(storeCollectionVC)
     }
     
 }

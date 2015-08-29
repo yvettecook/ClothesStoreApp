@@ -20,9 +20,6 @@
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FFJ-ux-Ik5">
                                 <rect key="frame" x="0.0" y="0.0" width="396" height="600"/>
-                                <connections>
-                                    <segue destination="mdT-2v-2yS" kind="embed" id="XbF-1x-ouo"/>
-                                </connections>
                             </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -33,6 +30,9 @@
                             <constraint firstItem="FFJ-ux-Ik5" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="pUS-u9-NVx"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="storeCollectionContainer" destination="FFJ-ux-Ik5" id="n2k-9I-oqi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -40,17 +40,17 @@
         <!--Store Collection View Controller-->
         <scene sceneID="aHT-9O-dvc">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="mdT-2v-2yS" customClass="StoreCollectionViewController" customModule="ClothesStoreApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="StoreCollectionViewController" automaticallyAdjustsScrollViewInsets="NO" id="mdT-2v-2yS" customClass="StoreCollectionViewController" customModule="ClothesStoreApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9uC-Ab-4xF"/>
                         <viewControllerLayoutGuide type="bottom" id="Sei-v1-z2B"/>
                     </layoutGuides>
                     <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="RPY-Iu-hb3">
-                        <rect key="frame" x="0.0" y="0.0" width="396" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Htg-i1-8k4">
-                                <rect key="frame" x="0.0" y="0.0" width="396" height="600"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Htg-i1-8k4">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="kiF-vb-GDp">
                                     <size key="itemSize" width="150" height="150"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -97,7 +97,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AeS-ED-DMz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="86" y="1169"/>
+            <point key="canvasLocation" x="207" y="1131"/>
         </scene>
     </scenes>
 </document>
