@@ -21,16 +21,24 @@
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FFJ-ux-Ik5">
                                 <rect key="frame" x="0.0" y="0.0" width="396" height="600"/>
                             </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6iB-1M-0u6">
+                                <rect key="frame" x="395" y="0.0" width="205" height="600"/>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="FFJ-ux-Ik5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="HeK-8q-d4X"/>
+                            <constraint firstItem="6iB-1M-0u6" firstAttribute="leading" secondItem="FFJ-ux-Ik5" secondAttribute="trailing" constant="-1" id="Idd-Hg-2fB"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="6iB-1M-0u6" secondAttribute="bottom" id="K4R-De-EtQ"/>
+                            <constraint firstItem="6iB-1M-0u6" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="ayI-4f-sIb"/>
                             <constraint firstItem="FFJ-ux-Ik5" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.66" id="mfB-Jt-LWN"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="FFJ-ux-Ik5" secondAttribute="bottom" id="oSC-SC-KNx"/>
                             <constraint firstItem="FFJ-ux-Ik5" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="pUS-u9-NVx"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="6iB-1M-0u6" secondAttribute="trailing" constant="-16" id="xhe-BY-dc6"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="basketContainer" destination="6iB-1M-0u6" id="Wre-5a-bQU"/>
                         <outlet property="storeCollectionContainer" destination="FFJ-ux-Ik5" id="n2k-9I-oqi"/>
                     </connections>
                 </viewController>
@@ -124,7 +132,65 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AeS-ED-DMz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="20" y="1543"/>
+            <point key="canvasLocation" x="238" y="1127"/>
+        </scene>
+        <!--Basket View Controller-->
+        <scene sceneID="Ypm-wl-1ZB">
+            <objects>
+                <viewController storyboardIdentifier="BasketViewController" automaticallyAdjustsScrollViewInsets="NO" id="ah6-Qo-fz5" customClass="BasketViewController" customModule="ClothesStoreApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="htD-Fo-68N"/>
+                        <viewControllerLayoutGuide type="bottom" id="DmA-Zg-NZz"/>
+                    </layoutGuides>
+                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Dby-tY-cDb">
+                        <rect key="frame" x="0.0" y="0.0" width="250" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="r2q-Xu-XbP">
+                                <rect key="frame" x="0.0" y="0.0" width="250" height="449"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BasketProductCell" id="EVT-bR-0G4" customClass="BasketProductCell" customModule="ClothesStoreApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="250" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="EVT-bR-0G4" id="PxE-JK-L3P">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Product Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lZk-9H-tey">
+                                                    <rect key="frame" x="17" y="11" width="111" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="nameLabel" destination="lZk-9H-tey" id="q7U-aI-3L8"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="r2q-Xu-XbP" firstAttribute="top" secondItem="htD-Fo-68N" secondAttribute="bottom" constant="-20" id="1kS-Y7-72A"/>
+                            <constraint firstItem="r2q-Xu-XbP" firstAttribute="top" secondItem="htD-Fo-68N" secondAttribute="bottom" constant="-20" id="IW5-y4-7ue"/>
+                            <constraint firstItem="DmA-Zg-NZz" firstAttribute="top" secondItem="r2q-Xu-XbP" secondAttribute="bottom" constant="151" id="ZGo-3r-N3i"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="r2q-Xu-XbP" secondAttribute="trailing" constant="-16" id="jjr-nQ-qJo"/>
+                            <constraint firstItem="r2q-Xu-XbP" firstAttribute="top" secondItem="htD-Fo-68N" secondAttribute="bottom" constant="-20" id="kkG-UM-msZ"/>
+                            <constraint firstItem="r2q-Xu-XbP" firstAttribute="leading" secondItem="Dby-tY-cDb" secondAttribute="leadingMargin" constant="-16" id="vFo-dj-Mf4"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="250" height="600"/>
+                    <connections>
+                        <outlet property="tableView" destination="r2q-Xu-XbP" id="KgO-7i-tFt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ofM-Pc-Hvq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="809" y="415"/>
         </scene>
     </scenes>
 </document>
