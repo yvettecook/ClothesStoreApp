@@ -32,14 +32,15 @@ class BasketViewController : UIViewController, UITableViewDataSource, UITableVie
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("BasketProductCell") as! BasketProductCell
-        let productInfo = basket.basket[0]
+        let productInfo = basket.basket[indexPath.row]
         let product = productInfo.product
         cell.nameLabel.text = product.name
         return cell
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-
+        let parentVC = self.parentViewController as! MainViewController
+        parentVC.removeProductFromBasket(indexPath.row)
     }
     
     // Mark: Updating View

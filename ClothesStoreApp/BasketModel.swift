@@ -12,10 +12,13 @@ class BasketModel : NSObject {
     
     var basket = [ProductInfoStruct]()
  
-    func addProductToBasket(product: ProductModel){
+    func addProductToBasket(product: ProductModel) {
         let productInfo = ProductInfoStruct(product: product, quantity:1)
         basket.append(productInfo)
     }
     
+    func removeProductFromBasket(index: Int) {
+        basket.removeAtIndex(index)
+    }
     
 }

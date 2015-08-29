@@ -20,7 +20,7 @@ class StoreCollectionViewController : UIViewController, UICollectionViewDelegate
         collectionView.dataSource = self
     }
     
-    // Mark : UICollectionViewDelegate
+    // Mark: UICollectionViewDelegate
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return store.catalogue.count
@@ -37,7 +37,11 @@ class StoreCollectionViewController : UIViewController, UICollectionViewDelegate
         return cell
     }
     
-
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        let parentVC = self.parentViewController as! MainViewController
+        let product = store.catalogue[indexPath.row].product
+        parentVC.addProductToBasket(product)
+    }
     
     
 }

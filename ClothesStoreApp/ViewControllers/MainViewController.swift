@@ -36,9 +36,6 @@ class MainViewController : UIViewController {
         let product2 = ProductModel(name: "Suede Shoes", category: product2cat, price:42.00)
         store.addProductToCatalogue(product2, quantity: 4)
         
-        // Testing add basket
-        
-        addProductToBasket(product1)
     }
     
     // Mark: Child ViewControllers Set-Up
@@ -48,7 +45,7 @@ class MainViewController : UIViewController {
         storeCollectionVC.store = self.store
         storeCollectionVC.view.frame = storeCollectionContainer.bounds
         storeCollectionContainer.addSubview(storeCollectionVC.view)
-        self.addChildViewController(storeCollectionVC)
+        addChildViewController(storeCollectionVC)
     }
     
     func populateBasketView() {
@@ -56,6 +53,7 @@ class MainViewController : UIViewController {
         basketVC.basket = self.basket
         basketVC.view.frame = basketContainer.bounds
         basketContainer.addSubview(basketVC.view)
+        addChildViewController(basketVC)
         self.basketVC = basketVC
 
     }
@@ -63,8 +61,12 @@ class MainViewController : UIViewController {
     // Mark: Basket Methods
     
     func addProductToBasket(product: ProductModel) {
-        let product = self.store.catalogue[0].product
-        self.basket.addProductToBasket(product)
+        basket.addProductToBasket(product)
+        basketVC?.refresh()
+    }
+    
+    func removeProductFromBasket(index: Int) {
+        basket.removeProductFromBasket(index)
         basketVC?.refresh()
     }
     
