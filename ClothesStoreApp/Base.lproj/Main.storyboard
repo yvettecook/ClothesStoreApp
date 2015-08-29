@@ -157,13 +157,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Product Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lZk-9H-tey">
-                                                    <rect key="frame" x="51" y="11" width="191" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="myJ-jh-Gtg">
-                                                    <rect key="frame" x="13" y="11" width="25" height="21"/>
+                                                    <rect key="frame" x="8" y="11" width="234" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
@@ -176,22 +170,49 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Cost:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VX0-CS-29F">
+                                <rect key="frame" x="16" y="475" width="85" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="85" id="D0Z-en-Nxs"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wds-nV-b6e">
+                                <rect key="frame" x="127" y="475" width="107" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="r2q-Xu-XbP" firstAttribute="top" secondItem="htD-Fo-68N" secondAttribute="bottom" constant="-20" id="1kS-Y7-72A"/>
+                            <constraint firstItem="VX0-CS-29F" firstAttribute="top" secondItem="r2q-Xu-XbP" secondAttribute="bottom" constant="26" id="7dd-Mn-4cp"/>
                             <constraint firstItem="r2q-Xu-XbP" firstAttribute="top" secondItem="htD-Fo-68N" secondAttribute="bottom" constant="-20" id="IW5-y4-7ue"/>
                             <constraint firstItem="DmA-Zg-NZz" firstAttribute="top" secondItem="r2q-Xu-XbP" secondAttribute="bottom" constant="151" id="ZGo-3r-N3i"/>
+                            <constraint firstItem="VX0-CS-29F" firstAttribute="leading" secondItem="Dby-tY-cDb" secondAttribute="leadingMargin" id="dJi-SC-d8m"/>
+                            <constraint firstItem="Wds-nV-b6e" firstAttribute="trailing" secondItem="Dby-tY-cDb" secondAttribute="trailingMargin" id="hrv-Bf-9Ay"/>
                             <constraint firstAttribute="trailingMargin" secondItem="r2q-Xu-XbP" secondAttribute="trailing" constant="-16" id="jjr-nQ-qJo"/>
+                            <constraint firstItem="Wds-nV-b6e" firstAttribute="leading" secondItem="VX0-CS-29F" secondAttribute="trailing" constant="26" id="kOw-cv-Hlv"/>
                             <constraint firstItem="r2q-Xu-XbP" firstAttribute="top" secondItem="htD-Fo-68N" secondAttribute="bottom" constant="-20" id="kkG-UM-msZ"/>
+                            <constraint firstItem="Wds-nV-b6e" firstAttribute="top" secondItem="r2q-Xu-XbP" secondAttribute="bottom" constant="26" id="ppW-M0-5Mj"/>
                             <constraint firstItem="r2q-Xu-XbP" firstAttribute="leading" secondItem="Dby-tY-cDb" secondAttribute="leadingMargin" constant="-16" id="vFo-dj-Mf4"/>
+                            <constraint firstItem="Wds-nV-b6e" firstAttribute="top" secondItem="htD-Fo-68N" secondAttribute="bottom" constant="455" id="vcp-eW-HWU"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="vcp-eW-HWU"/>
+                            </mask>
+                        </variation>
                     </view>
                     <toolbarItems/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="250" height="600"/>
                     <connections>
                         <outlet property="tableView" destination="r2q-Xu-XbP" id="KgO-7i-tFt"/>
+                        <outlet property="totalCostLabel" destination="Wds-nV-b6e" id="arC-aY-gdl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ofM-Pc-Hvq" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -21,4 +21,21 @@ class BasketModel : NSObject {
         basket.removeAtIndex(index)
     }
     
+    func calculateTotalCost() -> Float {
+        var cost : Float = 0.00
+        
+        for productInfo in basket {
+            let price = productInfo.product.price.value
+            cost = cost + price
+        }
+        
+        return cost
+    }
+    
+    func totalCostString() -> String {
+        let costFloat = calculateTotalCost()
+        let cost = PriceStruct(value:costFloat)
+        return cost.priceDisplay
+    }
+    
 }

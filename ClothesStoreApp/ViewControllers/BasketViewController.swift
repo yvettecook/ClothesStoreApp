@@ -14,6 +14,7 @@ class BasketViewController : UIViewController, UITableViewDataSource, UITableVie
     var basket = BasketModel()
     
     @IBOutlet var tableView: UITableView!
+    @IBOutlet var totalCostLabel: UILabel!
     
     override func viewDidLoad() {
         tableView.dataSource = self
@@ -47,6 +48,10 @@ class BasketViewController : UIViewController, UITableViewDataSource, UITableVie
     
     func refresh() {
         tableView.reloadData()
+        totalCostRefresh()
     }
     
+    func totalCostRefresh(){
+        totalCostLabel.text = basket.totalCostString()
+    }
 }
