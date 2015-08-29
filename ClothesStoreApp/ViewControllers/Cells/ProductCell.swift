@@ -12,5 +12,6 @@ import UIKit
 class ProductCell : UICollectionViewCell {
     
     @IBOutlet var nameLabel: UILabel!
+    @IBOutlet var quantityLabel: UILabel!
     
 }
