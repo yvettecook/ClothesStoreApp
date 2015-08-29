@@ -89,6 +89,12 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Price" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gjj-D1-24U">
+                                                    <rect key="frame" x="22" y="94" width="109" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
@@ -96,6 +102,7 @@
                                         <connections>
                                             <outlet property="genderLabel" destination="yaC-Zk-r7h" id="y1N-Sb-36f"/>
                                             <outlet property="nameLabel" destination="AlX-3X-0pl" id="RQR-ZL-o9C"/>
+                                            <outlet property="priceLabel" destination="Gjj-D1-24U" id="Ivo-zd-DxP"/>
                                             <outlet property="quantityLabel" destination="fMr-yN-JKX" id="n9R-a4-q7j"/>
                                         </connections>
                                     </collectionViewCell>

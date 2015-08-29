@@ -19,6 +19,7 @@
 		A5C0C8681B920C16001532A7 /* ProductInfoStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C0C8671B920C16001532A7 /* ProductInfoStruct.swift */; };
 		A5C0C86A1B920C6C001532A7 /* ProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C0C8691B920C6C001532A7 /* ProductModel.swift */; };
 		A5C0C86C1B9217D7001532A7 /* CategoryStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C0C86B1B9217D7001532A7 /* CategoryStruct.swift */; };
+		A5C0C86E1B921B5F001532A7 /* PriceStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C0C86D1B921B5F001532A7 /* PriceStruct.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		A5C0C8671B920C16001532A7 /* ProductInfoStruct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProductInfoStruct.swift; path = Models/ProductInfoStruct.swift; sourceTree = "<group>"; };
 		A5C0C8691B920C6C001532A7 /* ProductModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProductModel.swift; path = Models/ProductModel.swift; sourceTree = "<group>"; };
 		A5C0C86B1B9217D7001532A7 /* CategoryStruct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CategoryStruct.swift; path = Models/CategoryStruct.swift; sourceTree = "<group>"; };
+		A5C0C86D1B921B5F001532A7 /* PriceStruct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PriceStruct.swift; path = Models/PriceStruct.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,9 +131,10 @@
 			isa = PBXGroup;
 			children = (
 				A5C0C8651B920BA8001532A7 /* StoreModel.swift */,
-				A5C0C8671B920C16001532A7 /* ProductInfoStruct.swift */,
 				A5C0C8691B920C6C001532A7 /* ProductModel.swift */,
+				A5C0C8671B920C16001532A7 /* ProductInfoStruct.swift */,
 				A5C0C86B1B9217D7001532A7 /* CategoryStruct.swift */,
+				A5C0C86D1B921B5F001532A7 /* PriceStruct.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -257,6 +260,7 @@
 				A5C0C83D1B9207A4001532A7 /* AppDelegate.swift in Sources */,
 				A5C0C8641B9208B3001532A7 /* ProductCell.swift in Sources */,
 				A5C0C86C1B9217D7001532A7 /* CategoryStruct.swift in Sources */,
+				A5C0C86E1B921B5F001532A7 /* PriceStruct.swift in Sources */,
 				A5C0C8681B920C16001532A7 /* ProductInfoStruct.swift in Sources */,
 				A5C0C8611B92084F001532A7 /* StoreCollectionViewController.swift in Sources */,
 				A5C0C85F1B920835001532A7 /* MainViewController.swift in Sources */,

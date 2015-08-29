@@ -12,10 +12,12 @@ class ProductModel : NSObject {
     
     let name : String
     let category : CategoryStruct
+    let price : PriceStruct
     
-    init(name: String, category: CategoryStruct){
+    init(name: String, category: CategoryStruct, price: Float){
         self.name = name
         self.category = category
+        self.price = PriceStruct(value: price)
     }
     
 }

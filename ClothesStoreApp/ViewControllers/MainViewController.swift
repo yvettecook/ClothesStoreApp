@@ -26,10 +26,10 @@ class MainViewController : UIViewController {
     
     func populateStore() {
         let product1cat = CategoryStruct(gender: Gender.Female, department: Department.Footwear)
-        let product1 = ProductModel(name: "Almond Toe Court Shoes", category: product1cat)
+        let product1 = ProductModel(name: "Almond Toe Court Shoes", category: product1cat, price:99.00)
         store.addProductToCatalogue(product1, quantity: 5)
         let product2cat = CategoryStruct(gender: .Male, department: .Footwear)
-        let product2 = ProductModel(name: "Suede Shoes", category: product2cat)
+        let product2 = ProductModel(name: "Suede Shoes", category: product2cat, price:42.00)
         store.addProductToCatalogue(product2, quantity: 4)
     }
     

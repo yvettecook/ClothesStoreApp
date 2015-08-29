@@ -33,6 +33,7 @@ class StoreCollectionViewController : UIViewController, UICollectionViewDelegate
         cell.nameLabel.text = product.name
         cell.quantityLabel.text = productInfo.quantity.description
         cell.genderLabel.text = product.category.gender.description
+        cell.priceLabel.text = product.price.priceDisplay
         return cell
     }
     
