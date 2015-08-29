@@ -39,9 +39,13 @@ class StoreCollectionViewController : UIViewController, UICollectionViewDelegate
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         let parentVC = self.parentViewController as! MainViewController
-        let product = store.catalogue[indexPath.row].product
-        parentVC.addProductToBasket(product)
+        parentVC.addProductToBasket(indexPath.row)
     }
     
+    // Mark: RefreshingView
+    
+    func refresh() {
+        collectionView.reloadData()
+    }
     
 }

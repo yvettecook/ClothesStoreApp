@@ -16,7 +16,9 @@ class MainViewController : UIViewController {
     
     @IBOutlet var storeCollectionContainer: UIView!
     @IBOutlet var basketContainer: UIView!
+    
     var basketVC : BasketViewController?
+    var storeVC : StoreCollectionViewController?
     
     // Mark: ViewController LifeCycle
 
@@ -46,6 +48,7 @@ class MainViewController : UIViewController {
         storeCollectionVC.view.frame = storeCollectionContainer.bounds
         storeCollectionContainer.addSubview(storeCollectionVC.view)
         addChildViewController(storeCollectionVC)
+        self.storeVC = storeCollectionVC
     }
     
     func populateBasketView() {
@@ -60,14 +63,21 @@ class MainViewController : UIViewController {
     
     // Mark: Basket Methods
     
-    func addProductToBasket(product: ProductModel) {
+    func addProductToBasket(index: Int) {
+        store.decrementProductAtCatalogueIndex(index)
+        let product = store.catalogue[index].product
         basket.addProductToBasket(product)
         basketVC?.refresh()
+        storeVC?.refresh()
     }
     
     func removeProductFromBasket(index: Int) {
+        let productName = basket.basket[0].product.name
+        store.incrementProductWithName(productName)
         basket.removeProductFromBasket(index)
         basketVC?.refresh()
+        storeVC?.refresh()
+
     }
     
 }

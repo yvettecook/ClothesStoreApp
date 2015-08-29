@@ -17,5 +17,25 @@ class StoreModel : NSObject {
         catalogue.append(productInfo)
     }
     
+    func decrementProductAtCatalogueIndex(index: Int) {
+        catalogue[index].quantity = catalogue[index].quantity - 1
+    }
+    
+    func incrementProductWithName(name: String) {
+        for productInfo in catalogue {
+            var index = 0
+            if (productInfo.product.name == name) {
+                println(productInfo.quantity)
+                catalogue[index].quantity = catalogue[index].quantity + 1
+                return
+            } else {
+                index++
+            }
+        }
+    }
+    
+    
+    
+    
     
 }

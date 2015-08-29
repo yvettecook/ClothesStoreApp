@@ -11,6 +11,6 @@ import Foundation
 struct ProductInfoStruct {
     
     let product : ProductModel
-    let quantity : Int
+    var quantity : Int
     
 }
