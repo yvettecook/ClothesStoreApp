@@ -1,5 +1,5 @@
 //
-//  MainViewController.swift
+//  ProductModel.swift
 //  ClothesStoreApp
 //
 //  Created by Yvette Cook on 29/08/2015.
@@ -7,10 +7,13 @@
 //
 
 import Foundation
-import UIKit
 
-class MainViewController : UIViewController {
- 
+class ProductModel : NSObject {
     
+    let name : String
+    
+    init(name : String){
+        self.name = name
+    }
     
 }

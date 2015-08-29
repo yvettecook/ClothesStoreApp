@@ -26,6 +26,7 @@ class StoreCollectionViewController : UIViewController, UICollectionViewDelegate
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("productCell", forIndexPath: indexPath) as! ProductCell
+        cell.nameLabel.text = "Test"
         return cell
     }
     

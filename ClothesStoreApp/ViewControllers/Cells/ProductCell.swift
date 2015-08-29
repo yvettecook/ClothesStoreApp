@@ -11,5 +11,6 @@ import UIKit
 
 class ProductCell : UICollectionViewCell {
     
+    @IBOutlet var nameLabel: UILabel!
     
 }

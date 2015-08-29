@@ -1,5 +1,5 @@
 //
-//  MainViewController.swift
+//  ProductInfoStruct.swift
 //  ClothesStoreApp
 //
 //  Created by Yvette Cook on 29/08/2015.
@@ -7,10 +7,10 @@
 //
 
 import Foundation
-import UIKit
 
-class MainViewController : UIViewController {
- 
+struct ProductInfoStruct {
     
+    let product : ProductModel
+    let quantity : Int
     
 }
