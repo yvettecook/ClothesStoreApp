@@ -17,6 +17,8 @@ class StoreModel : NSObject {
         catalogue.append(productInfo)
     }
     
+    // When refactoring comes, these 2 functions would be the priority.
+    
     func decrementProductAtCatalogueIndex(index: Int) {
         catalogue[index].quantity = catalogue[index].quantity - 1
     }
